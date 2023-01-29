@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- Iconos -->
+    <link rel="icon" type="image/x-icon" href="../assets/image/icono.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/index.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Fuentes -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Nunito&family=Poor+Story&family=Poppins:wght@200&family=Prompt:wght@300&family=Shadows+Into+Light&family=Signika&display=swap" rel="stylesheet">
+
+    <title>Portfolio</title>
+</head>
+<body>
+
+<main class="contenedor-principal">
+    <div class="incide">
+            <img class="foto-portada" src="../assets/image/Foto-portada.png" alt="">
+            <nav id="menu" class="">
+                <ul id="links">
+                    <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">Inicio</a></li>
+                    <li><a href="#sobreMi" onclick="seleccionar(this)">Sobre mi</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar(this)">Portfolio</a></li>
+                    <li><a href="#educacion" onclick="seleccionar(this)">Educacion</a></li>
+                    <li><a href="#habilidades" onclick="seleccionar(this)">Habilidades</a></li>
+                    <li><a href="#contacto" onclick="seleccionar(this)">Contacto</a></li>
+                </ul>
+            </nav>
+    </div>
+
+    <section class="contenedor__info" id="inicio">
+
+        <div class="contenedor__info-inicio ">
+            <h1 id="texto" class="info__inicio-h1"></h1>
+            <p class="info__inicio-p1">BIENVENIDOS A MI PORTFOLIO COMO DESARROLLADOR WEB <br> FRONT-END!</p>
+            <p class="info__inicio-p2">Aqui en este portfolio voy a compartir todas mis habilidades como desarrollador front-end <br> para mostrarle al mundo lo que soy capaz de hacer, espero que les guste..!</p>
+            <a href="../pdf/Portfolio-Facundo-Rullo.pdf" download="Portfolio Facundo Rullo.pdf" class="btn__neon-cv">
+                <span id="span1"></span>
+                <span id="span2"></span>
+                <span id="span3"></span>
+                <span id="span4"></span>
+                Descargar CV
+            </a>
+            <nav class="icons__inicio">
+                    <span><a href="https://www.linkedin.com/in/facundo-rullo/" target="_blank"><img class="icono-linkedin" src="../assets/image/linkedinh.png" alt="icono-Linkedin"></a></span>
+                    <span><a href="https://github.com/FacuuR001" target="_blank"><img class="icono-git" src="../assets/image/git-hub.png" alt="icono-gitHub"></a></span>
+                    <span><a href="https://www.tiktok.com/@deswev6" target="_blank"><img class="icono-tiktok" src="../assets/image/tiktok.png" alt="icono-Tiktok"></a></span>
+                    <span><a href="https://www.instagram.com/facu.rullo12/?next=%2F" target="_blank"><img class="icono-instagram" src="../assets/image/instagram.png" alt="icono-Instagram"></a></span>
+            </nav>
+        </div>
+
+        <hr id="sobreMi" style="color: #fff;">
+
+        <div class="contenedor__info-sobreMi ">
+            <h2 class="info__sobreMi-h2">Sobre Mi</h2>
+            <p class="info__sobreMi-p">Hola me llamo Facundo Rullo, tengo 21 años soy de Argentina, actualmente vivo en la Ciudad de <br> Rio Cuarto, Córdoba. <br> Actualmente me encuentro estudiando en la carrera analista en computación en la universidad <br> nacional de Rio Cuarto, también estudio de forma autodidacta ya eh realizado varios cursos <br> de programación y la rama que mas me llama la atención es el desarrollo web front-end. <br>
+                Me gusta diseñar paginas y luego pasarlas a código. Hace ya 1 año que  estudio programación <br> y me gustaría seguir aprendiendo cada vez mas para algún dia poder trabajar  de lon que me gusta el <br> maravilloso mundo de la programación.
+                A continuación voy a mostrar un poco de los proyectos que <br> propios en los que vengo trabajando, voy a dar lo mejor de mi espero que les guste!!</p>
+        </div>
+
+        <hr id="portfolio" style="color: #fff;">
+
+        <div class="contenedor__info-portfolio ">
+            <h3 class="info__portfolio-h3">Portfolio</h3>
+            <div class="card border border-primary-subtle" style="width: 18rem; background-color: #2D204F;">
+                <img src="../assets/image/imagen-portfolio.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fw-medium" style="color: #EA6FFF;"  >Landing Page</h5>
+                    <p class="card-text fw-semibold" style="color: #4D6F9C;">Sitio web responsivo, realizado en la formación de principiante de programación Front-End</p>
+                    <div class="icons__card ">
+                        <i class="fa-brands fa-html5"></i>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <i class="fa-brands fa-bootstrap"></i>
+                        <i class="fa-brands fa-sass"></i>
+                    </div>
+                    <div class="icons__card-enlaces">
+                        <a href="https://github.com/FacuuR001/Primera-Pagina-Web.git" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://eerwerwerwerwer.000webhostapp.com/index.html#" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr id="educacion" style="color: #fff;">
+
+        <div class="contenedor__info-educacion ">
+            <h4 class="info__educacion-h4">Educacion</h4>
+            <div class="info__educacion-contenedor">
+                <div class="curso-1 cursos-btn">
+                    <span>Fundamentos de la programacion</span>
+                    <span class="curso-span2"> 21 de agosto 2022</span>
+                    <p>5 horas de capacitacion</p>
+                    <span>EDteam</span>
+                    <span class="btn-certificado"><a style="--color:#04AA6D" href="../pdf/Fundamentos-de-la-programacion-EDteam.pdf" download="Fundamentos de la programacion EDteam.pdf"><span>Certificado</span><i></i></a></span>
+                </div>
+
+                <hr style="color: #000;">
+
+                <div class="curso-2 cursos-btn">
+                    <span>Fundamentos de la programacion</span>
+                    <span class="curso2-span2">Septiembre 2022 - Diciembre 2022</span>
+                    <p>4 meses de capacitacion</p>
+                    <span>Instituto Celsius</span>
+                    <span class="btn-certificado"><a style="--color:#04AA6D" href="../pdf/Fundamentos-de-la-programacion-Celsius.pdf" download="Fundamentos de la programacion.pdf"><span>Certificado</span><i></i></a></span>
+                </div>
+
+                <hr style="color: #000;">
+
+                <div class="curso-3 cursos-btn">
+                    <span>Introduccion a la programacion</span>
+                    <span class="curso3-span2"> 27 de agosto 2023</span>
+                    <p>5h 36min de capacitacion</p>
+                    <span>OpenBootcamp</span>
+                    <span class="btn-certificado"><a style="--color:#04AA6D" href="../pdf/introduccion-a-la-programacion-openbootcamp.pdf" download="Introduccion a la programacion OpenBootcamp.pdf"><span>Certificado</span><i></i></a></span>
+                </div>
+
+                <hr style="color: #000;">
+
+                <div class="curso-4 cursos-btn">
+                    <span>La ruta del desarrollador web</span>
+                    <span class="curso4-span2"> 25 de agosto 2022</span>
+                    <p>3 horas de capacitacion</p>
+                    <span>EDteam</span>
+                    <span class="btn-certificado"><a style="--color:#04AA6D" href="../pdf/Ruta-del-desarrollador-web-EDteam.pdf" download="Ruta del desarrollo web EDteam.pdf"><span>Certificado</span><i></i></a></span>
+                </div>
+
+                <hr style="color: #000;">
+
+                <div class="curso-5 cursos-btn">
+                    <span>Introduccion a la terminal de linux</span>
+                    <span class="curso5-span2"> 31 de agosto 2022</span>
+                    <p>2 horas de capacitacion</p>
+                    <span>EDteam</span>
+                    <span class="btn-certificado"><a style="--color:#04AA6D" href="../pdf/Introduccion-a-la-terminal-linux-EDteam.pdf" download="Introduccion a la terminal EDteam.pdf"><span>Certificado</span><i></i></a></span>
+                </div>
+
+                <hr style="color: #000;">
+
+                <div class="curso-6 cursos-btn">
+                    <span>Diplomatura en HTML y CSS</span>
+                    <span class="curso6-span2"> 17 de diciembre 2022</span>
+                    <p>17h 43min de capacitacion</p>
+                    <span>OpenBootcamp</span>
+                    <span class="btn-certificado"><a style="--color:#04AA6D" href="../pdf/Diplomatura-en-HTML-y-CSS.pdf" download="Diplomatura en HTML y CSS OpenBootcamp.pdf"><span>Certificado</span><i></i></a></span>
+                </div>
+
+                <hr style="color: #000;">
+
+                <div class="curso-7 cursos-btn">
+                    <span>Curso HTML</span>
+                    <span class="curso7-span2"> Septiembre 2022 - Septiembre 2022</span>
+                    <p>2h 30min de capacitacion</p>
+                    <span>Curso Lucas Dalto</span>
+                    <span class="btn-certificado"><a style="--color:#04AA6D" href="https://www.youtube.com/watch?v=kN1XP-Bef7w&t=2s&ab_channel=SoyDalto" target="_blank"><span>Curso de YouTube</span><i></i></a></span>
+                </div>
+
+                <hr style="color: #000;">
+
+                <div class="curso-8 cursos-btn">
+                    <span>Curso HTML</span>
+                    <span class="curso8-span2"> Septiembre 2022 - Septiembre 2022</span>
+                    <p>6 horas de capacitacion</p>
+                    <span>Curso Dorian Desings</span>
+                    <span class="btn-certificado"><a style="--color:#04AA6D" href="https://www.youtube.com/watch?v=vz4z0RLcAyk&t=18731s&ab_channel=DorianDesings" target="_blank"><span>Curso de YouTube</span><i></i></a></span>
+                </div>
+
+                <hr style="color: #000;">
+
+                <div class="curso-9 cursos-btn">
+                    <span>Curso CSS</span>
+                    <span class="curso9-span2"> Octubre 2022 - Diciembre 2022</span>
+                    <p>9h 46min de capacitacion</p>
+                    <span>Curso Lucas Dalto</span>
+                    <span class="btn-certificado"><a style="--color:#04AA6D" href="https://www.youtube.com/watch?v=OWKXEJN67FE&t=2s&ab_channel=SoyDalto" target="_blank"><span>Curso de YouTube</span><i></i></a></span>
+                </div>
+            </div>
+        </div>
+
+        <hr id="habilidades" style="color: #fff;">
+
+        <div class="contenedor__info-habilidades ">
+            <h5 class="info__habilidades-h5">Habilidades</h5>
+            <div class="habilidades-contenidas">
+                <div class="lenguajes-maquetado">
+                    <p>Lenguajes de Maquetado</p>
+                    <div class="maquetado-html">
+                        <i class="fa-brands fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                    <span class="maquetado-css">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </span>
+                </div>
+                <div class="lenguajes-programacion">
+                    <p>Lenguajes de Programacion</p>
+                    <div class="programacion-js">
+                        <i class="fa-brands fa-square-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="programacion-java">
+                        <i class="fa-brands fa-java"></i>
+                        <span>Java</span>
+                    </div>
+                    <div class="programacion-python">
+                        <i class="fa-brands fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                </div>
+                <div class="framework-librerias">
+                    <p>Framework y Librerias</p>
+                    <div class="framework-bootstrap">
+                        <i class="fa-brands fa-bootstrap"></i>
+                        <span>BootStrap</span>
+                    </div>
+                    <div class="framework-sass">
+                        <i class="fa-brands fa-sass"></i>
+                    </div>
+                </div>
+                <div class="software-herramientas">
+                    <p>Software y Herramientas</p>
+                    <div class="tecnologias-git">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="tecnologias-vsc">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Visual Studio Code</span>
+                    </div>
+                    <div class="tecnologias-sublime-text">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Sublime Text</span>
+                    </div>
+                    <div class="tenologias-linux">
+                        <i class="fa-brands fa-linux"></i>
+                        <span>Linux</span>
+                    </div>
+                    <div class="tecnologias-photoshop">
+                        <i class="fa-solid fa-image"></i>
+                        <span>photoshop</span>
+                    </div>
+                    <div class="tecnologias-figma">
+                        <i class="fa-brands fa-figma"></i>
+                        <span>Figma</span>
+                    </div>
+                </div>
+                <div class="seccion-aprendiendo">
+                    <p>Estoy Aprendiendo</p>
+                    <ul class="lista-de-cosas-aprendiendo">
+                        <li> &#10004;  JavaScript por <b style="color: #04AA6D;"><a href="https://www.youtube.com/playlist?list=PLE8uP447fYpiBqMVF1hdWl9uFeVEeXRTm" target="_blank">Lucas Dalto</a></b></li>
+                        <li> &#10004;  Python por <b style="color: #04AA6D;"><a href="https://www.youtube.com/watch?v=nKPbfIU442g&ab_channel=SoyDalto" target="_blank">Lucas Dalto</a></b></li>
+                        <li> &#10004;  Programacion Web Front-End por <b style="color: #04AA6D;"><a href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa" target="_blank">Argentina  Programa 4.0</a></b></li>
+                        <li> &#10004;  Programacion Web Front-End por <b style="color: #04AA6D;"><a href="https://campus.open-bootcamp.com/login" target="_blank">OpenBootcamp</a></b></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr id="contacto" style="color: #fff;">
+
+        <div class="contenedor__info-contacto ">
+            <h6 class="info__contacto-h6">Contactame</h6>
+            <nav class="nav-contacto">
+                <div class="contacto-linkedin">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/facundo-rullo/" target="_blank" >LinkeDin</a>
+                </div>
+                <div class="contacto-email">
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="mailto:facundorullo132@gmail.com" target="_blank">Email</a>
+                </div>
+                <div class="contacto-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <a href="https://wa.me/+5493515453894" target="_blank">WhatsApp</a>
+                </div>
+                <div class="contacto-instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    <a href="https://www.instagram.com/facu.rullo12/?next=%2F" target="_blank"> Instagram</a>
+                </div>
+                <div class="contacto-tiktok">
+                    <i class="fa-brands fa-tiktok"></i>
+                    <a href="https://www.tiktok.com/@deswev6" target="_blank">TikTok</a>
+                </div>
+            </nav>
+            <div class="sitio-desarrollado">
+                <p class="sitio__desarrollado-p">Este sitio fue desarrollado con:</p>
+                <div class="tecnologias-utilizadas">
+                    <div class="utilizo-html">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <div class="utilizo-css">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+                    <div class="utilizo-js">
+                        <i class="fa-brands fa-square-js"></i>
+                    </div>
+                    <div class="utilizo-bootstrap">
+                        <i class="fa-brands fa-bootstrap"></i>
+                    </div>
+                    <div class="utilizo-sass">
+                        <i class="fa-brands fa-sass"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="herramientas-utilizadas-en-el-sitio">
+                <p class="herramientas-utilizadas-p">Herramientas Utilizadas</p>
+                <div class="herramientas">
+                    <div class="herramienta-figma">
+                        <i class="fa-brands fa-figma"></i>
+                        <span>Figma</span>
+                    </div>
+                    <div class="herramienta-google-font">
+                        <i class="fa-solid fa-font"></i>
+                        <span>Google Font</span>
+                    </div>
+                    <div class="herramienta-font-awesome">
+                        <i class="fa-solid fa-font-awesome"></i>
+                        <span>Font Awesome</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="../JavaScript/index.js"></script>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<!-- Libreria de iconos -->
+<script src="https://kit.fontawesome.com/163fdda2e7.js" crossorigin="anonymous"></script>
+</body>
+</html>

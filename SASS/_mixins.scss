@@ -1,0 +1,270 @@
+@use "variables";
+
+/*Mixins de Diseño General*/
+
+@mixin tamaño-de-seccion() {
+    margin: 62px 50px 0 70px;
+    box-sizing: border-box;
+    min-height: 87vh;
+}
+
+@mixin encabezados-principales() {
+    color: variables.$color-titular;
+    font-size: 90px;
+}
+@mixin encabezados-secundarios() {
+    color: variables.$color-titular;
+    font-size: 20px;
+}
+
+@mixin tamaño-iconos-portfolio() {
+    font-size: 30px;
+}
+
+@mixin font-size-educacion() {
+    font-size: 23px;
+}
+
+@mixin boton-certificado() {
+    .btn-certificado {
+        a {
+            float: right;
+            position: relative;
+            background: #444;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1rem;
+            padding: 10px 30px;
+            letter-spacing: .1em;
+            transition: .5s;
+
+            &:hover {
+                letter-spacing: .15em;
+                background: var(--color);
+                color: var(--color);
+                box-shadow: 0 0 35px var(--color);
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 2px;
+                background: #27282c;
+            }
+
+            span {
+                position: relative;
+                z-index: 1;
+            }
+
+            i {
+                position: absolute;
+                inset: 0;
+                display: block;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -3.5px;
+                    left: 80%;
+                    width: 15px;
+                    height: 8px;
+                    border: 2px solid var(--color);
+                    background: #27282c;
+                    transform: translateX(-50%);
+                    transition: .5s;
+                }
+            }
+        }
+
+        a {
+            &:hover i::before {
+                width: 20px;
+                left: 20%;
+            }
+        }
+
+        a{
+            i {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -3.5px;
+                    left: 20%;
+                    width: 15px;
+                    height: 8px;
+                    border: 2px solid var(--color);
+                    background: #27282c;
+                    transform: translateX(-50%);
+                    transition: .5s;
+                }
+            }
+        }
+
+        a {
+            &:hover i::after {
+                width: 20px;
+                left: 80%;
+            }
+        }
+    }
+}
+
+@mixin iconos-habilidades-maquetado() {
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 550;
+    font-size: 20px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+@mixin iconos-habilidades-programacion() {
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 550;
+    font-size: 20px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+@mixin iconos-habilidades-framework() {
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 550;
+    font-size: 20px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+@mixin iconos-habilidades-tecnologias() {
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 550;
+    font-size: 20px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+@mixin tamaño-iconos-contactame() {
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+/* Mixins para Responsive 1024 px */
+
+@mixin encabezados-principales-responsive() {
+    color: variables.$color-titular;
+    font-size: 70px;
+}
+
+@mixin iconos-seccion-inicio-responsive() {
+    font-size: 35px;
+}
+
+@mixin tamaño-iconos-portfolio-responsive() {
+    font-size: 25px;
+    margin-top: -10px;
+}
+
+@mixin font-size-educacion-responsive() {
+    font-size: 20px;
+}
+
+@mixin boton-certificado-responsive() {
+    .btn-certificado {
+        a {
+            font-size: .7rem;
+        }
+    }
+}
+
+@mixin iconos-habilidades-maquetado-responsive() {
+    width: 75px;
+    font-size: 15px;
+}
+
+@mixin iconos-habilidades-programacion-responsive() {
+    font-size: 15px;
+}
+
+@mixin iconos-habilidades-framework-responsive() {
+    font-size: 15px;
+}
+
+@mixin iconos-habilidades-tecnologias-responsive() {
+    font-size: 15px;
+}
+
+/* Mixins para Responsive 768 px */
+
+@mixin encabezados-principales-responsive-768px() {
+    color: variables.$color-titular;
+    font-size: 50px;
+}
+
+@mixin iconos-seccion-inicio-responsive-768px() {
+    font-size: 15px;
+}
+
+@mixin font-size-educacion-responsive-768px() {
+    font-size:16px;
+}
+
+@mixin boton-certificado-responsive-768px() {
+    .btn-certificado {
+        a {
+            font-size: .5rem;
+        }
+    }
+}
+
+@mixin iconos-habilidades-maquetado-responsive-768px() {
+    width: 70px;
+    font-size: 14px;
+}
+
+@mixin iconos-habilidades-programacion-responsive-768px() {
+    font-size: 14px;
+}
+
+@mixin iconos-habilidades-framework-responsive-768px() {
+    font-size: 14px;
+}
+
+@mixin iconos-habilidades-tecnologias-responsive-768px() {
+    font-size: 14px;
+}
+
+/* Mixins para Responsive 500 px */
+
+@mixin encabezados-principales-responsive-500px() {
+    color: variables.$color-titular;
+    font-size: 35px;
+}
+
+@mixin tamaño-de-seccion-500px() {
+    margin: 50px 20px 0 20px;
+    box-sizing: border-box;
+    min-height: 87vh;
+}
+
+@mixin font-size-educacion-responsive-500px() {
+    font-size:10px;
+}
+
+@mixin boton-certificado-responsive-500px() {
+    .btn-certificado {
+        a {
+            font-size: .4rem;
+            padding: 8px 20px;
+            letter-spacing: .0em;
+        }
+    }
+}

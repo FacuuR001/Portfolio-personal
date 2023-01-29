@@ -1,0 +1,1288 @@
+@use "variables";
+@use "mixins";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: variables.$fuente-principal;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.contenedor-principal {
+    display: grid;
+    grid-template-columns: 260px 1fr;   
+
+        .incide {
+            background: linear-gradient(#382863, #161026 );
+            height: 100vh;
+            width: 200px;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            .check-btn {
+                font-size: 35px;
+                color: variables.$color-titular;
+                float: right;
+            }
+            
+            #menu {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 7px;
+
+                    a{
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        font-size: 18px;
+                        color: #7e6fb3;
+
+                        &:hover {
+                            color: #04aa6d;
+                        } 
+                    }
+
+                    #links {
+                        list-style: none;
+                        margin: 0;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0;
+                        text-align: center;
+
+                        li {
+                            .seleccionado{
+                                color: variables.$color-green;
+                            }
+                        }
+                    }
+                }
+        }
+
+        .foto-portada{
+            width: 150px;
+            border: 2px solid #04AA6D;
+            border-radius: 80px;
+        }
+}
+
+.contenedor__info {
+            background: linear-gradient(#261d47, #110d1f);
+            min-height: 100%;
+            width: calc(100vw - 220px);
+            position: absolute;
+            left: 200px;
+            
+
+            .contenedor__info-inicio {
+                @include mixins.tamaño-de-seccion();
+
+                    .info__inicio-h1 {
+                        @include mixins.encabezados-principales();
+                    }
+
+                    .info__inicio-p1 {
+                        color: variables.$color-p;
+                        font-size: 25px;
+                    }
+
+                    .info__inicio-p2 {
+                        color: variables.$color-p;
+                        font-size: 15px;
+                        margin-bottom: 50px;
+                    }
+
+                    .btn__neon-cv {
+                        position: relative;
+                        display: inline-block;
+                        padding: 10px 25px;
+                        color: #fff;
+                        letter-spacing: 4px;
+                        font-size: 20px;
+                        text-decoration: none;
+                        overflow: hidden;
+                        transition: .2s;
+
+                        &:hover {
+                            background: #a945c7;
+                            box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+                            transition-delay: 1s;
+                            }
+
+                            span {
+                                position: absolute;
+                                display: block;
+                            }
+                        }
+                        .btn__neon-cv {
+                            #span1 {
+                                top: 0;
+                                left: -100%;
+                                width: 100%;
+                                height: 2px;
+                                background: linear-gradient(90deg, transparent, #a945c7);
+                            }
+
+                            &:hover #span1 {
+                                left: 100%;
+                                transition: 1s;
+                            }
+                        }
+
+                        .btn__neon-cv {
+                            #span3 {
+                                bottom: 0;
+                                right: -100%;
+                                width: 100%;
+                                height: 2px;
+                                background: linear-gradient(270deg, transparent, #a945c7);
+                            }
+
+                            &:hover #span3 {
+                                right: 100%;
+                                transition: 1s;
+                                transition-delay: .5s;
+                            }
+                        }
+
+                        .btn__neon-cv {
+                            #span2 {
+                                top: -100%;
+                                right: 0;
+                                width: 2px;
+                                height: 100%;
+                                background: linear-gradient(180deg, transparent, #a945c7);
+                            }
+
+                            &:hover #span2 {
+                                top: 100%;
+                                transition: 1s;
+                                transition-delay: .25s;
+                            }
+                        }
+
+                        .btn__neon-cv {
+                            #span4 {
+                                bottom: -100%;
+                                left: 0;
+                                width: 2px;
+                                height: 100%;
+                                background: linear-gradient(360deg, transparent, #a945c7);
+                            }
+
+                            &:hover #span4 {
+                                bottom: 100%;
+                                transition: 1s;
+                                transition-delay: .75s;
+                            }
+                        }
+                    
+                    .icons__inicio{
+                        width: 500px;
+                        margin-top: 50px;
+                        
+
+                        span {
+                            margin-left: 20px;
+                            a {
+                                .icono-linkedin {
+                                    width: 40px;
+                                }
+
+                                .icono-git {
+                                    width: 40px;
+                                }
+
+                                .icono-tiktok {
+                                    width: 40px;
+                                }
+
+                                .icono-instagram {
+                                    width: 40px;
+                                }
+                            }
+                        }
+                    }
+            }
+
+            .contenedor__info-sobreMi {
+                @include mixins.tamaño-de-seccion();
+
+                .info__sobreMi-h2 {
+                    @include mixins.encabezados-principales();
+                    
+                }
+
+                .info__sobreMi-p {
+                    color: variables.$color-p;
+                    font-size: 1.3rem;
+                    margin-top: 50px;
+                }
+            }
+
+            .contenedor__info-portfolio {
+                @include mixins.tamaño-de-seccion();
+
+                .info__portfolio-h3 {
+                    @include mixins.encabezados-principales();
+                    margin-bottom: 50px;
+                }
+
+                .card {
+                    
+                    &:hover {
+                        position: relative;
+                        bottom: 20px;
+                        box-shadow: 0px 20px 35px #000;
+                        transition: 1s;
+                    }
+                    .card-body {
+                        .icons__card {
+                            display: inline-block;
+                            @include mixins.tamaño-iconos-portfolio();
+                            
+                            .fa-html5 {
+                                color: variables.$color-html;
+                            }
+
+                            .fa-css3-alt {
+                                color: variables.$color-css;
+                            }
+
+                            .fa-bootstrap {
+                                color: variables.$color-bootstrap;
+                            }
+
+                            .fa-sass {
+                                color: variables.$color-sass;
+                            }
+                        }
+                        .icons__card-enlaces {
+                            display: inline-block;
+                            float: right;
+                            @include mixins.tamaño-iconos-portfolio();
+
+                            .fa-github, .fa-link {
+                                color: variables.$color-gitHub;
+                                &:active {
+                                    position: relative;
+                                    bottom: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .contenedor__info-educacion {
+                @include mixins.tamaño-de-seccion();
+
+                .info__educacion-h4 {
+                    @include mixins.encabezados-principales();
+                }
+
+                .info__educacion-contenedor {
+                    color: variables.$color-p;
+                    @include mixins.font-size-educacion();
+                    
+
+                    p {
+                        margin: 0;
+                    }
+
+                    .cursos-btn {
+                        @include mixins.boton-certificado();
+                    }
+
+                        .curso-1 {
+                            .curso-span2 {
+                                float: variables.$posicion-derecha;
+                            }
+                        }
+
+                        .curso-2 {
+                            .curso2-span2 {
+                                float: variables.$posicion-derecha;
+                            }
+                        }
+
+                        .curso-3 {
+                            .curso3-span2 {
+                                float: variables.$posicion-derecha;
+                            }
+                        }
+
+                        .curso-4 {
+                            .curso4-span2 {
+                                float: variables.$posicion-derecha;
+                            }
+                        }
+
+                        .curso-5 {
+                            .curso5-span2 {
+                                float: variables.$posicion-derecha;
+                            }
+                        }
+
+                        .curso-6 {
+                            .curso6-span2 {
+                                float: variables.$posicion-derecha;
+                            }
+                        }
+
+                        .curso-7 {
+                            .curso7-span2 {
+                                float: variables.$posicion-derecha;
+                            }
+                        }
+
+                        .curso-8 {
+                            .curso8-span2 {
+                                float: variables.$posicion-derecha;
+                            }
+                        }
+
+                        .curso-9 {
+                            .curso9-span2 {
+                                float: variables.$posicion-derecha;
+                            }
+                        }
+                }
+            }
+
+            .contenedor__info-habilidades {
+                @include mixins.tamaño-de-seccion();
+
+                .info__habilidades-h5 {
+                    @include mixins.encabezados-principales();
+                }
+
+                .habilidades-contenidas {
+
+                    p {
+                        color: variables.$color-p;
+                        font-size: 25px;
+                    }
+
+                    .lenguajes-maquetado {
+                        margin-bottom: 10px;
+
+                            .maquetado-html {
+                                @include mixins.iconos-habilidades-maquetado();
+                                background-color: variables.$color-html;
+                            }
+
+                            .maquetado-css {
+                                @include mixins.iconos-habilidades-maquetado();
+                                background-color: variables.$color-css;
+                            }
+                    }
+
+                    .lenguajes-programacion {
+                        margin-bottom: 10px;
+
+                        .programacion-js {
+                            @include mixins.iconos-habilidades-programacion();
+                            background-color: variables.$color-javascript;
+                            width: 140px;
+                        }
+
+                        .programacion-java {
+                            @include mixins.iconos-habilidades-programacion();
+                            background-color: variables.$color-java;
+                            width: 80px;
+                        }
+
+                        .programacion-python {
+                            @include mixins.iconos-habilidades-programacion();
+                            background-color: variables.$color-python;
+                            width: 100px;
+                        }
+                    }
+
+                    .framework-librerias {
+                        margin-bottom: 10px;
+
+                        .framework-bootstrap {
+                            @include mixins.iconos-habilidades-framework();
+                            background-color: variables.$color-bootstrap;
+                            width: 140px;
+                        }
+
+                        .framework-sass {
+                            @include mixins.iconos-habilidades-framework();
+                            background-color: variables.$color-sass;
+                            width: 50px;
+                        }
+                    }
+
+                    .software-herramientas {
+                        margin-bottom: 10px;
+
+                        .tecnologias-git {
+                            @include mixins.iconos-habilidades-tecnologias();
+                            background-color: variables.$color-gitHub;
+                            width: 100px;
+                        }
+
+                        .tecnologias-vsc {
+                            @include mixins.iconos-habilidades-tecnologias();
+                            background-color: variables.$color-vsc;
+                            width: 220px;
+                        }
+
+                        .tecnologias-sublime-text {
+                            @include mixins.iconos-habilidades-tecnologias();
+                            background-color: variables.$color-sublime-text;
+                            width: 160px;
+                        }
+
+                        .tenologias-linux {
+                            @include mixins.iconos-habilidades-tecnologias();
+                            background-color: variables.$color-linux;
+                            width: 90px;
+                        }
+
+                        .tecnologias-photoshop {
+                            @include mixins.iconos-habilidades-tecnologias();
+                            background-color: variables.$color-photoshop;
+                            width: 140px;
+                        }
+
+                        .tecnologias-figma {
+                            @include mixins.iconos-habilidades-tecnologias();
+                            background-color: variables.$color-figma;
+                            width: 90px;
+                        }
+                    }
+
+                    .seccion-aprendiendo {
+
+                        .lista-de-cosas-aprendiendo {
+                            list-style: none;
+
+                            li {
+                                color: variables.$color-p;
+
+                                b {
+                                    a {
+                                        text-decoration: none;
+                                        color: variables.$color-green;
+
+                                        &:hover {
+                                            color: #127a54;
+                                        }
+
+                                        &:active {
+                                            color: #085338;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .contenedor__info-contacto {
+                @include mixins.tamaño-de-seccion();
+
+                .info__contacto-h6 {
+                    @include mixins.encabezados-principales();
+                }
+
+                .nav-contacto {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+
+                    a {
+                        text-decoration: none;
+                        color: variables.$color-p;
+                        
+                        &:active {
+                            color: #477fc7;
+                        }
+
+                        &:hover {
+                            color: #264670;
+                        }
+                    }
+
+                    .contacto-linkedin {
+                            color: variables.$color-linkedin;
+                            .fa-linkedin {
+                                @include mixins.tamaño-iconos-contactame();
+                            }
+                            
+                    }
+                    .contacto-email {
+                        color: variables.$color-email;
+                        .fa-envelope {
+                            @include mixins.tamaño-iconos-contactame();
+                        }
+                    }
+                    .contacto-whatsapp {
+                        color: variables.$color-whatsapp; 
+                        .fa-whatsapp {
+                            @include mixins.tamaño-iconos-contactame();
+                        }
+                    }
+                    .contacto-instagram {
+                        color: variables.$color-instagram;
+                        .fa-instagram {
+                            @include mixins.tamaño-iconos-contactame();
+                        }
+                    }
+                    .contacto-tiktok {
+                        color: variables.$color-tiktok;
+                        .fa-whatsapp {
+                            @include mixins.tamaño-iconos-contactame();
+                        }
+                    }
+                }
+
+                .sitio-desarrollado {
+                    .sitio__desarrollado-p {
+                        @include  mixins.encabezados-secundarios();
+                    }
+
+                    .tecnologias-utilizadas {
+                        display: flex;
+                        gap: 20px;
+                        margin-bottom: 10px;
+                        font-size: 40px;
+
+                        
+
+                        .utilizo-html {
+                            color: variables.$color-html;
+                            
+                        }
+
+                        .utilizo-css {
+                            color: variables.$color-css;
+                        }
+
+                        .utilizo-js {
+                            color: variables.$color-javascript;
+                        }
+
+                        .utilizo-bootstrap {
+                            color: variables.$color-bootstrap;
+                        }
+
+                        .utilizo-sass {
+                            color: variables.$color-sass;
+                        }
+                    }
+                }
+
+                .herramientas-utilizadas-en-el-sitio {
+                    .herramientas-utilizadas-p {
+                        @include  mixins.encabezados-secundarios();
+                    }
+
+                    .herramientas {
+                        display: flex;
+                        gap: 20px;
+                        
+
+                        span {
+                            color: variables.$color-p;
+                            font-size: 20px;
+                        }
+
+                        .herramienta-figma {
+                            font-size: 25px;
+                            color: variables.$color-figma;
+                        }
+                            
+                        .herramienta-google-font {
+                            font-size: 25px;
+                            color: variables.$color-google-font;
+                        }
+    
+                        .herramienta-font-awesome {
+                            font-size: 25px;
+                            color: variables.$color-font-awesome;
+                        }
+                    }
+                }
+            }
+}
+
+@media (max-width: 2560px) {
+
+    .contenedor__info {
+        width: calc(100vw - 200px);
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .contenedor-principal {
+        .incide {
+            #menu {
+                a {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .foto-portada{
+            width: 140px;
+        }
+    }
+
+    .contenedor__info {
+        .contenedor__info-inicio {
+            .info__inicio-h1 {
+                @include mixins.encabezados-principales-responsive();
+            }
+
+            .info__inicio-p1 {
+                font-size: 20px;
+            }
+
+            .info__inicio-p2 {
+                font-size: 13px;
+                margin-bottom: 35px;
+            }
+
+            .btn__neon-cv {
+                font-size: 17px;
+            }
+
+            .icons__inicio{
+                width: 300px;
+                margin-top: 40px;
+                
+
+                span {
+                    margin-left: 15px;
+                    a {
+                        .icono-linkedin {
+                            @include mixins.iconos-seccion-inicio-responsive();
+                        }
+
+                        .icono-git {
+                            @include mixins.iconos-seccion-inicio-responsive();
+                        }
+
+                        .icono-tiktok {
+                            @include mixins.iconos-seccion-inicio-responsive();
+                        }
+
+                        .icono-instagram {
+                            @include mixins.iconos-seccion-inicio-responsive();
+                        }
+                    }
+                }
+            }
+        }
+
+        .contenedor__info-sobreMi {
+            .info__sobreMi-h2 {
+                @include mixins.encabezados-principales-responsive();
+            }
+            .info__sobreMi-p {
+                font-size: 1rem;
+                margin-top: 40px;
+            }
+        }
+
+        .contenedor__info-portfolio {
+            .info__portfolio-h3 {
+                @include mixins.encabezados-principales-responsive();
+                margin-bottom: 30px;
+            }
+
+            .card {
+                height: 300px;
+                .card-body {
+                    .icons__card {
+                        @include mixins.tamaño-iconos-portfolio-responsive();
+                    }
+                    .icons__card-enlaces {
+                        @include mixins.tamaño-iconos-portfolio-responsive();
+                        
+                    }
+                }
+            }
+        }
+
+        .contenedor__info-educacion {
+            .info__educacion-h4 {
+                @include mixins.encabezados-principales-responsive();
+            }
+            .info__educacion-contenedor {
+                @include mixins.font-size-educacion-responsive();
+
+                .cursos-btn {
+                    @include mixins.boton-certificado-responsive();
+                }
+            }
+        }
+
+        .contenedor__info-habilidades {
+            .info__habilidades-h5 {
+                @include mixins.encabezados-principales-responsive();
+            }
+
+            .habilidades-contenidas {
+                p {
+                    font-size: 23px;
+                    margin-bottom: 10px;
+                }
+                .lenguajes-maquetado {
+                    margin-bottom: 10px;
+
+                        .maquetado-html {
+                            @include mixins.iconos-habilidades-maquetado-responsive();
+                        }
+
+                        .maquetado-css {
+                            @include mixins.iconos-habilidades-maquetado-responsive();
+                        }
+                }
+
+                .lenguajes-programacion {
+                    margin-bottom: 10px;
+
+                    .programacion-js {
+                        @include mixins.iconos-habilidades-programacion-responsive();
+                        width: 110px;
+                    }
+
+                    .programacion-java {
+                        @include mixins.iconos-habilidades-programacion-responsive();
+                        width: 60px;
+                    }
+
+                    .programacion-python {
+                        @include mixins.iconos-habilidades-programacion-responsive();
+                        width: 80px;
+                    }
+                }
+
+                .framework-librerias {
+                    margin-bottom: 10px;
+
+                    .framework-bootstrap {
+                        @include mixins.iconos-habilidades-framework-responsive();
+                        width: 110px;
+                    }
+
+                    .framework-sass {
+                        @include mixins.iconos-habilidades-framework-responsive();
+                        width: 40px;
+                    }
+                }
+
+                .software-herramientas {
+                    margin-bottom: 10px;
+
+                    .tecnologias-git {
+                        @include mixins.iconos-habilidades-tecnologias-responsive();
+                        width: 80px;
+                    }
+
+                    .tecnologias-vsc {
+                        @include mixins.iconos-habilidades-tecnologias-responsive();
+                        width: 160px;
+                    }
+
+                    .tecnologias-sublime-text {
+                        @include mixins.iconos-habilidades-tecnologias-responsive();
+                        width: 130px;
+                    }
+
+                    .tenologias-linux {
+                        @include mixins.iconos-habilidades-tecnologias-responsive();
+                        width: 70px;
+                    }
+
+                    .tecnologias-photoshop {
+                        @include mixins.iconos-habilidades-tecnologias-responsive();
+                        width: 110px;
+                    }
+
+                    .tecnologias-figma {
+                        @include mixins.iconos-habilidades-tecnologias-responsive();
+                        width: 70px;
+                    }
+                }
+
+                .seccion-aprendiendo {
+                }
+            }
+        }
+
+        .contenedor__info-contacto {
+            .info__contacto-h6 {
+                @include mixins.encabezados-principales-responsive();
+            }
+
+            .nav-contacto {
+                font-size: 18px;
+            }
+
+            .sitio-desarrollado {
+                .tecnologias-utilizadas {
+                    font-size: 30px;
+                }
+            }
+
+            .herramientas-utilizadas-en-el-sitio {
+                
+
+                .herramientas {
+                    span {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .contenedor-principal {
+        .incide {
+            #menu {
+                a {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .foto-portada{
+            width: 130px;
+        }
+    }
+
+    .contenedor__info {
+        .contenedor__info-inicio {
+            .info__inicio-h1 {
+                @include mixins.encabezados-principales-responsive-768px();
+            }
+
+            .info__inicio-p1 {
+                font-size: 16px;
+            }
+
+            .info__inicio-p2 {
+                font-size: 10px;
+                margin-bottom: 30px;
+            }
+
+            .btn__neon-cv {
+                font-size: 15px;
+            }
+
+            .icons__inicio{
+                width: 300px;
+                margin-top: 30px;
+                
+
+                span {
+                    
+                    .icono-linkedin {
+                        @include mixins.iconos-seccion-inicio-responsive-768px();
+                    }
+
+                    .icono-git {
+                            @include mixins.iconos-seccion-inicio-responsive-768px();
+                    }
+
+                    .icono-tiktok {
+                            @include mixins.iconos-seccion-inicio-responsive-768px();
+                    }
+
+                    .icono-instagram {
+                            @include mixins.iconos-seccion-inicio-responsive-768px();
+                    }
+                }
+            }
+        }
+
+        .contenedor__info-sobreMi {
+            .info__sobreMi-h2 {
+                @include mixins.encabezados-principales-responsive-768px();
+            }
+            .info__sobreMi-p {
+                font-size: .8rem;
+                margin-top: 30px;
+            }
+        }
+
+        .contenedor__info-portfolio {
+            .info__portfolio-h3 {
+                @include mixins.encabezados-principales-responsive();
+                margin-bottom: 20px;
+            }
+
+            .card {
+                height: 300px;
+                .card-body {
+                    .icons__card {
+                        @include mixins.tamaño-iconos-portfolio-responsive();
+                    }
+                    .icons__card-enlaces {
+                        @include mixins.tamaño-iconos-portfolio-responsive();
+                        
+                    }
+                }
+            }
+        }
+
+        .contenedor__info-educacion {
+            .info__educacion-h4 {
+                @include mixins.encabezados-principales-responsive-768px();
+            }
+            .info__educacion-contenedor {
+                @include mixins.font-size-educacion-responsive-768px();
+
+                .cursos-btn {
+                    @include mixins.boton-certificado-responsive-768px();
+                }
+            }
+        }
+
+        .contenedor__info-habilidades {
+            .info__habilidades-h5 {
+                @include mixins.encabezados-principales-responsive-768px();
+            }
+
+            .habilidades-contenidas {
+                p {
+                    font-size: 20px;
+                    margin-bottom: 8px;
+                }
+                .lenguajes-maquetado {
+                    margin-bottom: 8px;
+
+                        .maquetado-html {
+                            @include mixins.iconos-habilidades-maquetado-responsive-768px();
+                        }
+
+                        .maquetado-css {
+                            @include mixins.iconos-habilidades-maquetado-responsive-768px();
+                        }
+                }
+
+                .lenguajes-programacion {
+                    margin-bottom: 8px;
+
+                    .programacion-js {
+                        @include mixins.iconos-habilidades-programacion-responsive-768px();
+                        width: 100px;
+                    }
+
+                    .programacion-java {
+                        @include mixins.iconos-habilidades-programacion-responsive-768px();
+                        width: 55px;
+                    }
+
+                    .programacion-python {
+                        @include mixins.iconos-habilidades-programacion-responsive-768px();
+                        width: 70px;
+                    }
+                }
+
+                .framework-librerias {
+                    margin-bottom: 10px;
+
+                    .framework-bootstrap {
+                        @include mixins.iconos-habilidades-framework-responsive-768px();
+                        width: 95px;
+                    }
+
+                    .framework-sass {
+                        @include mixins.iconos-habilidades-framework-responsive-768px();
+                        width: 35px;
+                    }
+                }
+
+                .software-herramientas {
+                    margin-bottom: 8px;
+
+                    .tecnologias-git {
+                        @include mixins.iconos-habilidades-tecnologias-responsive-768px();
+                        width: 75px;
+                    }
+
+                    .tecnologias-vsc {
+                        @include mixins.iconos-habilidades-tecnologias-responsive-768px();
+                        width: 150px;
+                    }
+
+                    .tecnologias-sublime-text {
+                        @include mixins.iconos-habilidades-tecnologias-responsive-768px();
+                        width: 110px;
+                    }
+
+                    .tenologias-linux {
+                        @include mixins.iconos-habilidades-tecnologias-responsive-768px();
+                        width: 60px;
+                    }
+
+                    .tecnologias-photoshop {
+                        @include mixins.iconos-habilidades-tecnologias-responsive-768px();
+                        width: 100px;
+                    }
+
+                    .tecnologias-figma {
+                        @include mixins.iconos-habilidades-tecnologias-responsive-768px();
+                        width: 65px;
+                    }
+                }
+
+                .seccion-aprendiendo {
+                }
+            }
+        }
+
+        .contenedor__info-contacto {
+            .info__contacto-h6 {
+                @include mixins.encabezados-principales-responsive-768px();
+            }
+
+            .nav-contacto {
+                font-size: 17px;
+            }
+            .herramientas-utilizadas-en-el-sitio {
+                .herramientas {
+                    span {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+
+    .contenedor-principal {
+        
+        .incide {
+            width: 100px;
+            #menu {
+                a {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .foto-portada{
+            width: 80px;
+        }
+    }
+    
+    .contenedor__info {
+        left: 100px;
+        width: calc(100vw - 100px);
+
+        .contenedor__info-inicio {
+            @include mixins.tamaño-de-seccion-500px();
+            margin-top: 100px;
+            .info__inicio-h1 {
+                @include mixins.encabezados-principales-responsive-500px();
+                margin-bottom: 20px;
+            }
+
+            .info__inicio-p1 {
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+
+            .info__inicio-p2 {
+                font-size: 10px;
+                margin-bottom: 35px;
+            }
+
+            .btn__neon-cv {
+                font-size: 17px;
+            }
+
+            .icons__inicio{
+                width: 250px;
+                margin-top: 40px;
+                
+
+                span {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .contenedor__info-sobreMi {
+            @include mixins.tamaño-de-seccion-500px();
+            .info__sobreMi-h2 {
+                @include mixins.encabezados-principales-responsive-500px();
+            }
+            .info__sobreMi-p {
+                font-size: .8rem;
+            }
+        }
+
+        .contenedor__info-portfolio {
+            @include mixins.tamaño-de-seccion-500px();
+            .info__portfolio-h3 {
+                @include mixins.encabezados-principales-responsive-500px();
+                margin-bottom: 30px;
+            }
+
+            .card {
+                height: 300px;
+                position: relative;
+                left: -8px;
+            }
+        }
+
+        .contenedor__info-educacion {
+            @include mixins.tamaño-de-seccion-500px();
+
+            .info__educacion-h4 {
+                @include mixins.encabezados-principales-responsive-500px();
+            }
+            .info__educacion-contenedor {
+                @include mixins.font-size-educacion-responsive-500px();
+
+                .cursos-btn {
+                    @include mixins.boton-certificado-responsive-500px();
+                }
+            }
+        }
+
+        .contenedor__info-habilidades {
+            .info__habilidades-h5 {
+                @include mixins.encabezados-principales-responsive-500px();
+            }
+
+            .habilidades-contenidas {
+                p {
+                    font-size: 20px;
+                    margin-bottom: 8px;
+                }
+                .lenguajes-maquetado {
+                    margin-bottom: 8px;
+
+                        .maquetado-html {
+                            @include mixins.iconos-habilidades-maquetado-responsive();
+                        }
+
+                        .maquetado-css {
+                            @include mixins.iconos-habilidades-maquetado-responsive();
+                        }
+                }
+
+                .lenguajes-programacion {
+                    margin-bottom: 8px;
+
+                    .programacion-js {
+                        @include mixins.iconos-habilidades-programacion-responsive();
+                        width: 110px;
+                    }
+
+                    .programacion-java {
+                        @include mixins.iconos-habilidades-programacion-responsive();
+                        width: 60px;
+                    }
+
+                    .programacion-python {
+                        @include mixins.iconos-habilidades-programacion-responsive();
+                        width: 80px;
+                    }
+                }
+
+                .framework-librerias {
+                    margin-bottom: 8px;
+
+                    .framework-bootstrap {
+                        @include mixins.iconos-habilidades-framework-responsive();
+                        width: 110px;
+                    }
+
+                    .framework-sass {
+                        @include mixins.iconos-habilidades-framework-responsive();
+                        width: 40px;
+                    }
+                }
+
+                .software-herramientas {
+                    margin-bottom: 8px;
+
+                    .tecnologias-git {
+                        @include mixins.iconos-habilidades-tecnologias-responsive();
+                        width: 80px;
+                    }
+
+                    .tecnologias-vsc {
+                        @include mixins.iconos-habilidades-tecnologias-responsive();
+                        width: 160px;
+                    }
+
+                    .tecnologias-sublime-text {
+                        @include mixins.iconos-habilidades-tecnologias-responsive();
+                        width: 130px;
+                    }
+
+                    .tenologias-linux {
+                        @include mixins.iconos-habilidades-tecnologias-responsive();
+                        width: 70px;
+                    }
+
+                    .tecnologias-photoshop {
+                        @include mixins.iconos-habilidades-tecnologias-responsive();
+                        width: 110px;
+                    }
+
+                    .tecnologias-figma {
+                        @include mixins.iconos-habilidades-tecnologias-responsive();
+                        width: 70px;
+                    }
+                }
+
+                .seccion-aprendiendo {
+                    ul {
+                        padding: 0
+                    }
+                }
+            }
+        }
+
+        .contenedor__info-contacto {
+            .info__contacto-h6 {
+                @include mixins.encabezados-principales-responsive-500px();
+            }
+
+            .nav-contacto {
+                font-size: 18px;
+            }
+            .herramientas-utilizadas-en-el-sitio {
+                .herramientas {
+                    display: flex;
+                    flex-direction: column;
+                    span {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
