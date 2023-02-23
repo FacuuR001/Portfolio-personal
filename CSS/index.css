@@ -66,7 +66,7 @@ html {
 }
 .contenedor-principal .foto-portada {
   width: 150px;
-  border: 2px solid #04AA6D;
+  border: 2spx solid #04AA6D;
   border-radius: 80px;
 }
 
@@ -206,8 +206,7 @@ html {
   margin-bottom: 50px;
 }
 .contenedor__info .contenedor__info-portfolio .card:hover {
-  position: relative;
-  bottom: 20px;
+  transform: translateY(-10px) translateX(-10px);
   box-shadow: 0px 20px 35px #000;
   transition: 1s;
 }
@@ -347,6 +346,9 @@ html {
 .contenedor__info .contenedor__info-educacion .info__educacion-contenedor .curso-9 .curso9-span2 {
   float: right;
 }
+.contenedor__info .contenedor__info-educacion .info__educacion-contenedor .curso-10 .curso10-span2 {
+  float: right;
+}
 .contenedor__info .contenedor__info-habilidades {
   margin: 62px 50px 0 70px;
   box-sizing: border-box;
@@ -445,6 +447,19 @@ html {
   color: #fff;
   background-color: #cf649a;
   width: 50px;
+}
+.contenedor__info .contenedor__info-habilidades .habilidades-contenidas .framework-librerias .libreria-axios {
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 550;
+  font-size: 20px;
+  margin-right: 10px;
+  color: #fff;
+}
+.contenedor__info .contenedor__info-habilidades .habilidades-contenidas .framework-librerias .libreria-axios .img-axios {
+  width: 132px;
+  height: 38px;
 }
 .contenedor__info .contenedor__info-habilidades .habilidades-contenidas .software-herramientas {
   margin-bottom: 10px;
@@ -763,6 +778,13 @@ html {
     font-size: 15px;
     width: 40px;
   }
+  .contenedor__info .contenedor__info-habilidades .habilidades-contenidas .framework-librerias .libreria-axios {
+    font-size: 15px;
+  }
+  .contenedor__info .contenedor__info-habilidades .habilidades-contenidas .framework-librerias .libreria-axios .img-axios {
+    width: 90px;
+    height: 27px;
+  }
   .contenedor__info .contenedor__info-habilidades .habilidades-contenidas .software-herramientas {
     margin-bottom: 10px;
   }
@@ -919,6 +941,13 @@ html {
   .contenedor__info .contenedor__info-habilidades .habilidades-contenidas .framework-librerias .framework-sass {
     font-size: 14px;
     width: 35px;
+  }
+  .contenedor__info .contenedor__info-habilidades .habilidades-contenidas .framework-librerias .libreria-axios {
+    font-size: 14px;
+  }
+  .contenedor__info .contenedor__info-habilidades .habilidades-contenidas .framework-librerias .libreria-axios .img-axios {
+    width: 80px;
+    height: 20px;
   }
   .contenedor__info .contenedor__info-habilidades .habilidades-contenidas .software-herramientas {
     margin-bottom: 8px;
@@ -1089,6 +1118,13 @@ html {
   .contenedor__info .contenedor__info-habilidades .habilidades-contenidas .framework-librerias .framework-sass {
     font-size: 15px;
     width: 40px;
+  }
+  .contenedor__info .contenedor__info-habilidades .habilidades-contenidas .framework-librerias .libreria-axios {
+    font-size: 14px;
+  }
+  .contenedor__info .contenedor__info-habilidades .habilidades-contenidas .framework-librerias .libreria-axios .img-axios {
+    width: 70px;
+    height: 20px;
   }
   .contenedor__info .contenedor__info-habilidades .habilidades-contenidas .software-herramientas {
     margin-bottom: 8px;
